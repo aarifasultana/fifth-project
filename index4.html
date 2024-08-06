@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AWS Event-3</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    body{
+      background-color: black;
+      font-family: sans-serif;
+    }
+    .gap-3 {
+    gap: 1rem !important;
+    justify-content: center;
+}
+    #can{
+      background: transparent;
+      backdrop-filter: blur(3px);
+    }
+    .content{
+      display: none;
+    }
+    .col:hover .content{
+      display: block;
+      background: transparent;
+      backdrop-filter: blur(5px);
+    }
+    @media screen and (max-width:992px){ 
+      #event{
+        display: none;
+      }
+    }
+    .row img:hover{
+        transform: scale(0.95);
+      }
+      .slide-img img{
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+      }
+
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg  bg-dark sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="nav-img.jpg" alt="" width="110"></a>
+      <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="index1.html">Overview</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="index3.html" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Experience
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index3.html">Expo</a></li>
+              <hr>
+              <li><a class="dropdown-item" href="index3.html">Plan your trip</a></li>
+              <hr>
+              <li><a class="dropdown-item" href="index3.html">Sessions</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Topics
+            </a>
+            <ul class="dropdown-menu text-white">
+              <li><a class="dropdown-item" href="#replay">re:Play</a></li>
+              <hr>
+              <li><a class="dropdown-item" href="#AI">Generative AI</a></li>
+              <hr>
+              <li><a class="dropdown-item" href="#ML">AI/ML</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="index2.html">Contact</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn bg-dark border-white text-white" type="submit">Register</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="slide-img">
+    <img src="slide-img1.jpg" alt="">
+  </div>
+
+  <!-- <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="conference-pass.png" class="d-block w-100" alt="" height="527vh" width="100%">
+      </div>
+      <div class="carousel-item">
+        <img src="secondary-hero-2.png" class="d-block w-100" alt=""  height="527vh" width="100%">
+      </div>
+      <div class="carousel-item">
+        <img src="slide-img1.jpg" class="d-block w-100" alt=""  height="527vh" width="100%">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div> -->
+
+
+
+
+<h1 class="text-center text-white p-4">Eat, drink, party, unwind</h1>
+  <div class="container-fluid d-flex my-5" style=" justify-content: center;">
+    <div class="row gap-3" id="replay">
+    <div class="card bg-dark" style="width: 18rem;">
+      <img src="music-img.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h4 class="card-title text-white">Music</h4>
+        <p class="card-text text-white">Enjoy electrifying beats from two main stages—one featuring a headlining DJ (to be announced during the week of re:Invent) and one showcasing a live band.</p>
+        <a href="#">learn more</a>
+      </div>
+    </div>
+
+    <div class="card bg-dark" style="width: 18rem;">
+      <img src="fun-games-img.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h4 class="card-title text-white">Fun And Games</h4>
+        <p class="card-text text-white">From dodgeball and button mash to table tennis and even a giant maze to get lost in, your final night at the event will be one to remember.</p>
+        <a href="#">learn more</a>
+      </div>
+    </div>
+    
+    <div class="card bg-dark" style="width: 18rem;">
+      <img src="food-img.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h4 class="card-title text-white">Food</h4>
+        <p class="card-text text-white">Reward yourself after a week of hard work with innovative and signature dishes from top chefs, covering a diverse array of dietary needs.</p>
+        <a href="#">learn more</a>
+      </div>
+    </div>
+  </div>
+  </div>  
+
+
+  
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-md-4 col-sm-6 my-2">
+        <div class="card">
+          <img src="expo-img1.png" alt="">
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 my-2">
+        <div class="card">
+          <img src="expo-img2.png" alt="">
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 my-2">
+        <div class="card">
+          <img src="expo-img3.png" alt="">
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 my-2">
+        <div class="card">
+          <img src="expo-img4.png" alt="">
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 my-2">
+        <div class="card">
+          <img src="expo-img5.png" alt="">
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 my-2">
+        <div class="card">
+          <img src="expo-img6.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 my-2">
+        <div class="card">
+          <img src="expo-img7.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 my-2">
+        <div class="card">
+          <img src="expo-img8.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 my-2">
+        <div class="card">
+          <img src="expo-img9.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-dark text-secondary px-4 py-5 text-center my-3">
+    <div class="py-5" id="AI">
+      <h1 class="display-5 fw-bold text-white">Generative AI</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="fs-5 mb-4">AWS makes it easy to build and scale generative AI that is customized for your data, your use cases, and your customers. Learn how to harness the power of generative AI on AWS to boost employee productivity, deliver exceptional customer experiences, and streamline business processes.</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">See Full Session catalog</button>
+          <button type="button" class="btn btn-outline-light btn-lg px-4">Explore All Generative AI Sessions</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+<div class="container" id="event">
+  <h1 class="text-center text-white p-4">AI/ML</h1>
+<div class="container-fluid my-5" id="ML">
+  <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+    <div class="col">
+      <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('builders-sessions-img.png');">
+        <div class="content flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+          <h3>Chart your AI/ML journey</h3>
+          <p>Sessions at re:Invent are offered in various formats and at different levels so you can learn at your own pace. Here are some examples from our catalog.</p>
+          <ul class="d-flex list-unstyled mt-auto">
+            <li class="me-auto">
+              <img src="logo-img1.webp" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+            </li>
+            <li class="d-flex align-items-center me-3">
+              <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+              <small>Earth</small>
+            </li>
+            <li class="d-flex align-items-center">
+              <!-- <img src="breakout-sessions-img.png" alt=""> -->
+              <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+              <small>3d</small>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('workshops-img.png');">
+        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1" id="can">
+          <h1>AIM302 | Build responsible AI applications </h1>
+          <ul class="d-flex list-unstyled mt-auto">
+            <li class="me-auto">
+              <img src="logo-img1.webp" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+            </li>
+            <li class="d-flex align-items-center me-3">
+              <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+              <small>Pakistan</small>
+            </li>
+            <li class="d-flex align-items-center">
+              <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+              <small>4d</small>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('breakout-sessions-img.png');">
+        <div class="content flex-column h-100 p-5 pb-3 text-shadow-1">
+          <h3>AIM306 | Prompt engineering</h3>
+          <p>Prompt engineering is the important process where you guide models (LLMs). This session  generative AI accuracy and performance.</p>
+          <ul class="d-flex list-unstyled mt-auto">
+            <li class="me-auto">
+              <img src="logo-img1.webp" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+            </li>
+            <li class="d-flex align-items-center me-3">
+              <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+              <small>California</small>
+            </li>
+            <li class="d-flex align-items-center">
+              <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+              <small>5d</small>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  
+</div>
+
+
+
+
+   <div class="bg-dark">  
+    <div class="container">
+      <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5">
+        <div class="col mb-3">
+          <a class="navbar-brand mb-3" href="#"><img src="nav-img.jpg" alt="" width="200"></a>
+          </a>
+        </div>
+        <div class="col mb-3">
+        </div>
+        <div class="col mb-3 text-secondary">
+          <h5>RESOURCES</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Plan your trip</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Sessions</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Become a sponsor</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">sponsors</a></li>
+          </ul>
+        </div>
+    
+        <div class="col mb-3 text-secondary">
+          <h5>COMMUNITIES</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">All Builders Welcome Grant</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Interactive Training</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">AWS Certified</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Bootcamps</a></li>
+          </ul>
+        </div>
+      </footer>
+      <div class=" d-flex border-top">
+        <p class="text-white mt-3">Privacy • Site Terms • Cookie Preferences • © 2024, Amazon Web Services, Inc. or its affiliates. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+  </div> 
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  </body>
+  
+  </html>
+  

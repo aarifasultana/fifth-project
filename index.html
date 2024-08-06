@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AWS Event</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+      body{
+        background-color: black;
+        font-family: sans-serif;
+      }
+      .row{
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        margin-bottom: 1rem;
+      }
+      #img1:hover{
+        transform: scale(1.06);
+      }
+      .parallax1{
+        height: 150vh;
+        background-image: url("paralax-img.jpg");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* object-fit: contain; */
+      }
+       .content1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+       background: transparent;
+       backdrop-filter: blur(10px);
+       padding: 20px 0;
+       color: #fff;
+       margin-bottom: 20em;
+       /* background-size: 400% 400%; 
+       animation:gradient 15s ease infinite; */
+      }
+      .content2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+       background: transparent;
+       backdrop-filter: blur(15px);
+       padding: 20px 0;
+       color: #fff;
+      }
+      /* @keyframes gradient{
+        0%{
+          background-position: 0% 50%;
+        }
+        50%{
+          background-position: 100% 50%;
+        }
+        100%{
+          background-position: 0% 50%;
+        }
+      }  */
+      
+       #expert{
+        width: 800px;
+        margin: auto;
+        height: 500px;
+        background-color:#212529;
+        padding: 4rem 5rem;
+        position: relative;
+        border-radius: 10px;
+       }
+       .textblock{
+        width: 45%;
+        text-align: center;
+        border: 1px solid;
+        border-radius: 10px;
+        padding: 30px 20px 30px 20px;
+        box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, .3);
+        background-color: #373b3e;
+       }
+       #expert img{
+        position: absolute;
+        top: 10%;
+        right: -21%;
+        box-shadow: 5px 4px 10px rgba(37, 37, 37, 0.5);
+       }
+       @media only screen and (max-width:1140px){
+        #expert{
+          width: 90%;
+          height: auto;
+        }
+        .textblock{
+          width: 100%;
+        }
+        #expert img{
+          display: none;
+        }
+
+       }     
+       @media screen and (max-width:400px){
+        #expert{
+          width: 100%;
+          height: auto;
+        }
+        .content{
+         font-size: 10px;
+        }
+        .textblock{
+          font-size: 10px;
+        }
+      } 
+@keyframes enter-animation {
+
+
+0%{
+    transform: translateY(-300px);
+    opacity: 0;
+
+}
+100%{
+    transform: translateY(0);
+    opacity: 1;
+
+}
+}
+.carousel-caption{
+    animation: enter-animation 1.6s 1;
+}
+@media only screen and (max-width:768px) {
+  .d-none {
+    display: block !important;
+}
+  
+}
+
+    </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg  bg-dark sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="nav-img.jpg" alt="" width="110"></a>
+      <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="index1.html">Overview</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="index3.html" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Experience
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index3.html">Expo</a></li>
+              <hr class="border- 1">
+              <li><a class="dropdown-item" href="index3.html">Plan your trip</a></li>
+              <hr>
+              <li><a class="dropdown-item" href="index3.html">Sessions</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="index4.html" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Topics
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index4.html">re:Play</a></li>
+              <hr>
+              <li><a class="dropdown-item" href="index4.html">Generative AI</a></li>
+              <hr>
+              <li><a class="dropdown-item" href="index4.html">AI/ML</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="index2.html">Contact</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn bg-dark border-white text-white" type="submit">Register</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="video" style="height: 70vh; width:100%;">
+        <video src="webiste-hero.mp4" muted autoplay></video></div>
+        <!-- <img src="image1.jpg" class="d-block w-100" alt="" height="530"> -->
+        <div class="carousel-caption d-none d-md-block">
+          <h1 style="font-size: xxx-large;font-weight: bolder;">Registration is now open</h1>
+          <p>DECEMBER 2 – 6, 2024 | LAS VEGAS, NV</p>
+          <p>FULL CONFERENCE PASS: $2,099</p>
+          <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight">Register Now</button>
+
+          <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title text-white" id="offcanvasRightLabel">Get ready for AWS re:Invent 2024</h5>
+              <button type="button" class="btn-close bg-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <p class="text-white">Register now to get a head start on choosing your best learning path, booking transportation and
+              accommodations, and bringing your team to an unforgettable week of innovation, connection, and fun.</p>
+              <button type="button" class="btn btn-primary">Register</button>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <h1 class="text-center my-5 text-white">Get expert insights</h1>
+
+      <div class="container-fluid d-flex my-3" style=" justify-content: center;">
+        <div class="row">
+        <div class="card bg-dark" id="img1" style="width: 18rem;">
+          <img src="card-img1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title text-white">Connect with AWS experts and peers</h4>
+            <p class="card-text text-white">AWS re:Invent is the place to make lifelong industry connections. Find mentors, interact with other AWS customers, and make progress on your own career development milestones.</p>
+            <a href="#">learn more</a>
+          </div>
+        </div>
+
+        <div class="card bg-dark" id="img1" style="width: 18rem;">
+          <img src="card-img2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title text-white">Be there for the latest announcements</h4>
+            <p class="card-text text-white">Learn about new product launches, watch demos, and get behind-the-scenes insights from AWS leaders—including CEO Matt Garman—and top AWS customers during five headline-making keynotes.</p>
+            <a href="#">learn more</a>
+          </div>
+        </div>
+        
+        <div class="card bg-dark" id="img1" style="width: 18rem;">
+          <img src="card-img3.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title text-white">Dive deep with AWS thought leaders</h4>
+            <p class="card-text text-white">Find out what’s top of mind for AWS experts during hour-long innovation talks, featuring in-depth discussion and insights about essential topics including data for generative AI, cloud operations, and emerging tech.</p>
+            <a href="#">learn more</a>
+          </div>
+        </div>
+      </div>
+      </div>  
+
+    <!-- <div class="content">
+      <h1 class="text-center my-5 text-white">The guidance you need—from AWS experts</h1>
+      <div class="container-fluid d-flex flex-wrap" style="position: relative; justify-content: center; flex-wrap: wrap; text-align: center; margin-bottom: 12em;">
+        <div class="expert-img"><img src="event-img1.jpg" class="img-fluid" alt="" style="min-height: 22vh;"></div>
+        <div class="card w-50 mb-3" style="position: absolute; top:11em;right:1em;">
+          <div class="card-body bg-dark">
+            <h4 class="card-title text-white">Grow your cloud skills</h4>
+            <p class="card-text text-white">From breakout and builders’ sessions to chalk talks and workshops, re:Invent offers a variety of learning formats and levels so that you can expand your knowledge at your own pace.</p>
+            <a href="#">learn more</a>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="content" style="margin-bottom: 5em;">
+    <h1 class="text-center my-5 text-white">The guidance you need—from AWS experts</h1>
+    <div class="container" id="expert">
+      <div class="textblock">
+        <h4 class="card-title text-white my-2">Grow your cloud skills</h4>
+        <p class="card-text text-white my-2">From breakout and builders’ sessions to chalk talks and workshops, re:Invent offers a variety of learning formats and levels so that you can expand your knowledge at your own pace.then use that data with the help of generative AI to minimize risk, lower costs, and make better supply chain decisions.</p>
+            <a href="#">learn more</a>
+      </div>
+      <img src="image1.jpg" alt="" height="400px" width="550px">
+    </div>
+    </div>
+
+<div class="parallax1">
+      <!-- <section class="parallax">
+      </section> -->
+      <section class="content1">
+        <div class="container">
+          <h2>CHALK TALK</h2>
+          <p>Join this chalk talk to learn how you can use the generative AI capabilities in AWS Supply Chain to get more value from your supply chain data. The talk includes an interactive discussion about how you can access a broader range of data faster, then use that data with the help of generative AI to minimize risk, lower costs, and make better supply chain decisions.</p>
+          <a class="text-dark" href="#">learn more</a>
+        </div>
+      </section>
+    
+     <div class="">
+     </div> 
+      <section class="content2">
+        <div class="container">
+          <h2>BREAKOUT SESSION</h2>
+          <p>Looking to integrate with generative AI workloads through user-friendly bots? Join this session to discover how AWS Wickr can help you gain granular control over access policies and regulate who can engage with generative AI models. Learn how Wickr facilitates auditing and regulatory requirements with a comprehensive history of generative AI interactions. </p>
+          <a class="text-dark" href="#">learn more </a>
+        </div>
+      </section>
+    </div>
+
+
+
+
+    <div>
+      <h1 class="text-center my-5 text-white">Come learn and celebrate with us</h1>
+      <div class="d-flex justify-content-center my-5 flex-wrap" style="gap: 10px;">
+      <img src="event-img5.png" class="rounded float-start" alt="" height="320" width="370">
+      <div class="card col-6 col-md-4" style="width: 23rem;">
+        <div class="card-body bg-dark text-center">
+          <h4 class="card-title text-white">Connect at the Expo</h4>
+          <p class="card-text text-white">Meet AWS experts and partners, see demos of the latest tools and innovations, and see firsthand how AWS turns dreams into reality.Wrap up the week with a celebration of all your hard work. Relax with live music, dodgeball, a giant maze, lounges—even a silent disco.</p>
+          <a href="#">learn more</a>
+        </div>
+      </div>
+      <img src="event-img2.jpg" class="rounded float-end" alt="" height="320" width="370">
+      </div>
+    </div>
+
+
+<div class="bg-dark">  
+    <div class="container">
+      <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5">
+        <div class="col mb-3">
+          <a class="navbar-brand mb-3" href="#"><img src="nav-img.jpg" alt="" width="200"></a>
+          </a>
+        </div>
+        <div class="col mb-3">
+        </div>
+        <div class="col mb-3 text-secondary">
+          <h5>RESOURCES</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Plan your trip</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Sessions</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Become a sponsor</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">sponsors</a></li>
+          </ul>
+        </div>
+    
+        <div class="col mb-3 text-secondary">
+          <h5>COMMUNITIES</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">All Builders Welcome Grant</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Interactive Training</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">AWS Certified</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Bootcamps</a></li>
+          </ul>
+        </div>
+      </footer>
+      <div class=" d-flex border-top">
+        <p class="text-white mt-3">Privacy • Site Terms • Cookie Preferences • © 2024, Amazon Web Services, Inc. or its affiliates. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

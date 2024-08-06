@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AWS Event
+    -1</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    body {
+      background-color: black;
+      font-family: sans-serif;
+    }
+
+    /* .row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      object-fit: contain;
+    } */
+
+    .col-lg-4 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; 
+    }
+    
+    @media only screen and (max-width:768px) {
+  #client {
+    font-size: 36px;
+}
+#client-name{
+  font-size: 22px;
+}
+  
+}
+    /* .banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://static.wixstatic.com/media/e76dd7_c91085a9b27b4e49a30223acc2f0f9fe~mv2.gif');
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0005;
+    border-radius: 40px;
+    border: 2px solid white;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 4em;
+}
+
+.banner-text h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.banner-text p {
+    font-size: 1.5rem;
+}
+ */
+
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg  bg-dark sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="nav-img.jpg" alt="" width="110"></a>
+      <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Overview</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="index3.html" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Experience
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index3.html">Expo</a></li>
+              <hr class="border- 1">
+              <li><a class="dropdown-item" href="index3.html">Plan your trip</a></li>
+              <hr>
+              <li><a class="dropdown-item" href="index3.html">Sessions</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="index4.html" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Topics
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index4.html">re:Play</a></li>
+              <hr>
+              <li><a class="dropdown-item" href="index4.html">GenerativeAI</a></li>
+              <hr>
+              <li><a class="dropdown-item " href="index4.html">AI/ML</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="index2.html">Contact</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn bg-dark border-white text-white" type="submit">Register</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+<!-- <div class="banner">
+  <div class="banner-text">
+      <h1>Registration</h1>
+      <p>Register now to get a head start on choosing your best learning path, booking transportation and accommodations, and bringing your team to an unforgettable week of innovation, connection, and fun.</p>
+  </div>
+</div> -->
+
+
+<div class="video" style="background-position: center; background-size: cover;">
+  <video src="overview-video.mp4" muted autoplay style="width:100%; object-fit: cover;"></video>
+</div>
+
+
+
+  <h1 class="text-center text-white fw-bold p-3" id="client" style="font-size: xxx-large;"> Our Clients</h1>
+
+  <div class="container marketing">
+
+      <div class="row d-flex justify-content-center align-items-center object-fit-contain">
+        <div class="col-lg-4">
+          <img src="client-img1.jpg" alt="" width="250" height="250" style="border-radius: 50%;">
+          <h2 class="fw-light text-white" id="client-name"> Analisse Shire</h2>
+          <p>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseWidthExample1" aria-expanded="false" aria-controls="collapseWidthExample1">
+              View details »
+            </button>
+          </p>
+          <div style="min-height: 150px;">
+            <div class="collapse collapse-horizontal" id="collapseWidthExample1">
+              <div class="card card-body bg-dark text-white" style="width: 300px;">
+                These clients facilitate tasks such as deploying applications, managing storage, and more, all within the AWS cloud environment.
+              </div>
+            </div>
+          </div>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img src="client-img2.webp" alt="" width="250" height="250" style="border-radius: 50%;">
+          <h2 class="fw-normal text-white" id="client-name"> Cannor Keaton</h2>
+          <p>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseWidthExample2" aria-expanded="false" aria-controls="collapseWidthExample2">
+              View details »
+            </button>
+          </p>
+          <div style="min-height: 150px;">
+            <div class="collapse collapse-horizontal" id="collapseWidthExample2">
+              <div class="card card-body  bg-dark text-white " style="width: 300px;">
+                These clients facilitate tasks such as deploying applications, managing storage, and more, all within the AWS cloud environment.
+              </div>
+            </div>
+          </div>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img src="client-img3.jpg" alt="" width="250" height="250" style="border-radius: 50%;">
+          <h2 class="fw-normal text-white" id="client-name"> Lavinia Blanchett</h2>
+          <p>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+              View details »
+            </button>
+          </p>
+          <div style="min-height: 150px;">
+            <div class="collapse collapse-horizontal" id="collapseWidthExample">
+              <div class="card card-body bg-dark text-white" style="width: 300px;">
+                These clients facilitate tasks such as deploying applications, managing storage,more, all within the AWS cloud environment.
+              </div>
+            </div>
+          </div>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1 text-white">Databases</h2>
+        <p class="lead text-white">Databases sessions at re:Invent explore how AWS databases offer a high-performance, secure for powering generative AI solutions and data-driven value for your business and customers. 
+        </p>
+        <a href="#">learn more</a>
+      </div>
+      <div class="col-md-5">
+        <img src="image2.jpg" alt=""height="350" width="100%">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1 text-white">Chart your databases journey</h2>
+        <p class="lead text-white">In this builders’ session, learn how to turn a new business idea into a fully functional data model in Amazon DynamoDB. </p>
+          <a href="#">learn more</a>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img src="event-img4.jpg" alt=""  height="350" width="100%">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1 text-white">Chart your databases journey</h2>
+        <p class="lead text-white">In this chalk talk, dive deep into how Amazon DynamoDB works at scale by collaboratively solving a few design puzzles that may seem simple but are actually complex.</p>
+          <a href="#">learn more</a>
+      </div>
+      <div class="col-md-5">
+        <img src="image3.jpg" alt=""  height="350" width="100%">
+      </div>
+    </div>
+    <hr class="featurette-divider">
+
+  </div>
+
+  <div class="bg-dark">  
+    <div class="container">
+      <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5">
+        <div class="col mb-3">
+          <a class="navbar-brand mb-3" href="#"><img src="nav-img.jpg" alt="" width="200"></a>
+        </div>
+        <div class="col mb-3">
+        </div>
+        <div class="col mb-3 text-secondary">
+          <h5>RESOURCES</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Plan your trip</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Sessions</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Become a sponsor</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">sponsors</a></li>
+          </ul>
+        </div>
+    
+        <div class="col mb-3 text-secondary">
+          <h5>COMMUNITIES</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">All Builders Welcome Grant</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Interactive Training</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">AWS Certified</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Bootcamps</a></li>
+          </ul>
+        </div>
+      </footer>
+      <div class=" d-flex border-top">
+        <p class="text-white mt-3">Privacy • Site Terms • Cookie Preferences • © 2024, Amazon Web Services, Inc. or its affiliates. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
